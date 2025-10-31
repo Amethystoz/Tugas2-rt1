@@ -1,0 +1,185 @@
+/* Variabel Warna */
+:root {
+    --ungu-gelap: #4B0082; /* Warna primer: Ungu Gelap */
+    --ungu-aksen: #800080; /* Warna aksen: Ungu Terong */
+    --emas: #FFD700;       /* Warna aksen: Emas */
+    --putih: #ffffff;
+    --abu-terang: #f4f4f9;
+}
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--abu-terang);
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header & Navigasi */
+header {
+    background: var(--ungu-gelap);
+    color: var(--putih);
+    padding: 15px 0;
+    border-bottom: 5px solid var(--emas);
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    color: var(--emas); /* Judul sekolah berwarna emas */
+    font-size: 1.8em;
+}
+
+header nav {
+    float: right;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: var(--putih);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: var(--emas);
+}
+
+/* Hero Section (Beranda) */
+.hero {
+    background: var(--ungu-aksen);
+    color: var(--putih);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    /* Tambahkan placeholder-image untuk background jika diperlukan */
+    /* background: url('hero-bg.jpg') no-repeat center center/cover; */
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--emas);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--emas);
+    color: var(--ungu-gelap);
+    padding: 12px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--ungu-gelap);
+    color: var(--emas);
+    border: 1px solid var(--emas);
+}
+
+/* Galeri Section */
+.galeri-section {
+    padding: 40px 0;
+    background: var(--putih);
+    text-align: center;
+}
+
+.galeri-section h3 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: var(--ungu-gelap);
+    border-bottom: 3px solid var(--emas);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.foto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 kolom di desktop */
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.foto-item {
+    background: var(--abu-terang);
+    border: 2px solid var(--ungu-aksen);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.foto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 200px; /* Tinggi seragam untuk foto */
+    object-fit: cover;
+    display: block;
+}
+
+.foto-item .caption {
+    padding: 15px 10px;
+    background: var(--ungu-gelap);
+    color: var(--emas);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    background: var(--ungu-gelap);
+    color: var(--putih);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Clearfix untuk float */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
